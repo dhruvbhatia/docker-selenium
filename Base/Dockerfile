@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM dockerfile/ubuntu:latest
 MAINTAINER Selenium <selenium-developers@googlegroups.com>
 
 #================================================
@@ -11,13 +11,6 @@ RUN  echo "deb http://archive.ubuntu.com/ubuntu trusty main universe\n" > /etc/a
 # Miscellaneous packages
 # Includes minimal runtime used for executing non GUI Java programs
 #========================
-RUN apt-get update -qqy \
-  && apt-get -qqy --no-install-recommends install \
-    ca-certificates \
-    unzip \
-    wget
-    
-# Install Java.
 RUN \
   echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
   add-apt-repository -y ppa:webupd8team/java && \
