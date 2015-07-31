@@ -20,6 +20,7 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | te
     && apt-get install -y --no-install-recommends \
     	oracle-java8-installer \
     	ca-certificates-java \
+    	unzip \
     	oracle-java8-set-default \
     && apt-get autoremove -y \
     && apt-get clean -y \
