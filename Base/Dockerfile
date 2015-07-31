@@ -1,4 +1,4 @@
-FROM dockerfile/ubuntu:latest
+FROM ubuntu:latest
 MAINTAINER Selenium <selenium-developers@googlegroups.com>
 
 #================================================
